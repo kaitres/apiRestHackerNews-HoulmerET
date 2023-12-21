@@ -1,0 +1,15 @@
+<div class="homepagebackground">
+    
+    <mat-toolbar color="primary">
+       ApiRest Hacker News
+    </mat-toolbar>
+    
+    <mat-list class="TopNews">
+        <mat-list-item><h1>{{storyText}}</h1></mat-list-item>
+        <mat-list-item><h2>Comments:</h2></mat-list-item>
+        <div *ngFor="let item of comments">
+            <app-comments [commentId]="item"></app-comments>
+        </div>
+    </mat-list> 
+
+</div>

@@ -1,0 +1,37 @@
+.example-list-wrapping {
+    max-width: 500px;
+  }
+
+.homepagebackground {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #000;
+}
+.TopNews {
+  margin-left: 15%;
+  margin-top: 2rem;
+}
+.spinner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.spinner {
+  margin: 20px;
+}
+
+.paginator{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+  
+}
+
+.space {
+  height: 50px;
+  width: 100%;
+}
+

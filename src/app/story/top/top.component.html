@@ -1,0 +1,30 @@
+<div class="homepagebackground">
+
+    <mat-toolbar color="primary">
+       ApiRest Hacker News
+    </mat-toolbar>
+
+    <div *ngIf="loading; else content" class="spinner-container">
+        <mat-spinner class="spinner" mode="indeterminate"></mat-spinner>
+    </div>
+
+    <ng-template #content >
+        <mat-list class="TopNews">
+            <mat-list-item> <h1>News</h1> </mat-list-item>
+            <mat-list-item *ngFor="let item of stories; let i = index">
+                <a matListItemTitle  href={{item.url}} >{{1+i+50*pageIndex+".- "}}{{item.title}}</a>
+                <span matListItemLine>{{item.score+" point(s) By: "+item.by+" Item: "+item.type}}</span>
+            </mat-list-item>
+        </mat-list>
+    </ng-template>
+    <div class="space">
+
+    </div>
+    <mat-paginator [length]="data.length"
+        [pageSize]="50" 
+        [hidePageSize]="true" 
+        (page)="handlePageEvent($event)"
+        class="paginator">
+    </mat-paginator>
+
+</div>

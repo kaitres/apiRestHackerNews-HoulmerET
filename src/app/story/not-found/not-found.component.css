@@ -1,0 +1,9 @@
+body {
+    margin: 1;
+    padding: 1;
+    background-image: url('../../../assets/pngwing.com\ \(2\).png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+  }

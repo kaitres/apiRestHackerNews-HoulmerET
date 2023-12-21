@@ -1,0 +1,15 @@
+
+<mat-list class="TopNews">
+
+    <mat-list-item [lines]="20">
+        <div matListItemTitle> ▲ {{ commentId.by }} </div>
+        <div matListItemLine style="white-space: normal; word-wrap: break-word;" [innerHTML]="commentId.text">
+        </div>
+        
+    </mat-list-item>
+
+    <div class="Comments" *ngFor="let item of comments">
+        <app-comments [commentId]="item"></app-comments>
+    </div>
+
+</mat-list> 
